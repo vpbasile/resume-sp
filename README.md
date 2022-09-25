@@ -1,7 +1,7 @@
 # Resume Single-Page App
 
-Content made interchangeable with JSON files: (real content and dummy content)
-Form made interchangeable with JSX templates: Print, Black, DarkBlue
+Content made interchangeable with JSON files: (real content and dummy content)\
+Form made interchangeable with JSX templates: Print, Black, DarkBlue\
 
 This project was generated from [vpbasile/react-router-dom-typescript](https://github.com/vpbasile/react-router-dom-typescript), which was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) 
 using [Template: react-router-dom-typescript](https://www.npmjs.com/package/cra-template-react-router-dom-typescript).

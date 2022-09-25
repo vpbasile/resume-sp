@@ -1,33 +1,13 @@
-import './style.css';
-import { Link } from 'react-router-dom';
+import NavBar from '../../shared-components/NavBar';
 
 export function HomePage() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="App container">
+      <header className="App-header row">
+        <h1>Homepage</h1>
       </header>
-
-      <div className="App-line"></div>
-      
-      <main className="App-main">
-        <p>
-          Page 1
-        </p>
-
-        <Link to="/page2" className="App-link">
-          Next Page
-        </Link>
+      <main className="App-main row">
+        <NavBar />
       </main>
     </div>
   );

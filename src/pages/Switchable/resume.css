@@ -1,0 +1,350 @@
+/*Defining color variables*/
+
+/* light theme colors */
+html{
+    --background-color: white;
+    --unaccent: hsl(200, 23%, 44%);
+    --text-primary:hsl(280, 80%, 15%);   /* Ratio to background-color: ___:1  */
+    --accent1: hsl(250, 100%, 40%);    /* Ratio to background-color: ___:1  */
+    --accent2:hsl(200, 100%, 27%);    /* Ratio to background-color: ___:1  */
+    --clash:hsl(37, 100%, 50%);
+}
+
+/* dark theme colors */
+html[data-theme='dark']{
+    --background-color:hsl(253, 17%, 16%);
+    --unaccent: hsl(170, 23%, 63%); 
+    --text-primary:hsl(280, 15%, 80%);    /* Ratio to background-color: 8.9:1  */
+    --accent1: hsl(200, 100%, 50%);    /* Ratio to background-color: 5.8:1 */ 
+    --accent2: hsl(217, 100%, 76%);    /* Ratio to background-color: 7:1 */
+    --clash:hsl(37, 100%, 50%);
+}
+
+body {
+    /* Stuff to make it printable */
+    width: 8in;
+    margin:auto;
+    padding:0.25in 5%;
+}
+
+@media print {
+    body {
+        /* Use light theme colors */    
+        --background-color: white;
+        --unaccent: hsl(200, 23%, 44%);
+        --text-primary:hsl(280, 80%, 15%);   /* Ratio to background-color: ___:1  */
+        --accent1: hsl(250, 100%, 40%);    /* Ratio to background-color: ___:1  */
+        --accent2:hsl(200, 100%, 27%);    /* Ratio to background-color: ___:1  */
+        --clash:hsl(37, 100%, 50%);
+    }
+}
+
+@media screen {
+    body {
+        margin-bottom: 200px;
+    }
+}
+
+@media screen and (max-width:8.5in) {
+    body {
+        width: auto;
+        padding: 2%;
+    }
+
+    .left-col {
+        width: 100%;
+    }
+
+    .right-col {
+        width: 100%;
+    }
+
+    h1 {
+        font-size:inherit;
+    }
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    /* Setting base font properties */
+    font-size: 9pt;
+    line-height: 1.25rem;
+    /* font-family:'Calibri','sans-serif','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+   font-family: 'Montserrat', sans-serif;
+   /* ======================================================== */
+}
+
+/* Divs */
+
+#header {
+    width: 100%;
+    /* margin-bottom: 3%; */
+    /* border-bottom: 0.3em double var(--text-primary); */
+}
+
+#header > div.left-col {max-width: 50%; float: left;}
+
+#header > div.right-col {max-width: 40%; float: right;}
+
+.nocolor {
+    color: var(--text-primary);
+}
+
+.accent {
+    color:var(--accent-contrast);
+    font-weight: bolder;
+}
+
+.justified {text-align: justify ;}
+
+h5.when {
+    margin-top: 2%;
+    text-align: left;
+    padding-left: 7%;
+}
+
+    /* Lists */
+
+div#experience > div > ul {
+    list-style-type: square;
+    border-left: 2px solid var(--accent2);
+    color: var(--text-primary);
+    margin-top: 0%;
+}
+
+ul ul {
+    color: var(--text-primary);
+    list-style-type: disc;
+    border-left: initial;
+}
+
+/*Text and Headers */
+
+a {color:var(--unaccent);}  
+div#drawing {display: none;}
+hr {color: var(--unaccent);}
+
+h1 {
+    color:var(--text-primary);
+    font-size: 3rem;
+    margin: 2% 0% 2% 0%;
+    letter-spacing: initial;
+}
+
+h2 {
+    color:var(--accent1);
+    font-size: 1.5rem;
+    font-size: 1.09rem;
+    line-height: 1;
+    margin-bottom: 0%;
+    /* border-bottom: 3px solid var(--unaccent); */
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+#competencies-table {
+    width:100%;
+}
+
+.what {
+    margin-bottom: 0%;
+    margin-top: 1%;
+    padding-left: 7%;
+}
+
+h4.what { font-size: 0.8em;}
+h5.when { font-size: 0.8em;}
+
+.where {
+    margin-bottom: 0%;
+    margin-top: 1%;
+    color: var(--accent2);
+    border-bottom: 2px solid var(--accent2);
+}
+
+.when {
+    color:var(--text-primary);
+    text-align: right;
+    font-size: 1em;
+    margin-top: 0px;
+}
+
+h4 {
+    color:var(--accent2);
+    margin: 0%;
+}
+
+h5 {margin-bottom: 3%;}
+
+/*Elements and Element-specific Classes*/
+
+
+table{
+    width: 100%;
+}
+
+td {
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.hoverable {
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.hoverable:hover {
+    /* background-color: var(--unaccent); */
+    color: var(--clash);
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+p {
+    text-indent: 2em;
+letter-spacing: 0.05rem;
+}
+
+li {letter-spacing: 0.05rem;}
+
+div.cover-letter {
+    margin: 5% 5%;
+    font-size: 10pt;
+}
+
+#signature {
+width:100%; 
+text-align: right;
+/* margin: 10%; */
+font-size-adjust: 1.25em;
+}
+
+/* Override classes */
+
+    #main-letter h2 {
+        text-align: left;
+    }
+
+  span.title {font-style: italic;}
+
+  span.draft::before {content: "[ ";}
+
+  span.draft {
+      color:var(--clash);
+      font-weight: bold;
+      background-color: var(--text-primary);
+  }
+  
+span.draft::after {content: " ]";}
+
+.no-show {display:none;}
+
+#page-breaker {page-break-before:always;}
+
+
+.contact-info {
+    text-align: right;
+}
+
+.contact-info h2 {
+    border-bottom:none;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color:var(--unaccent);
+    font-size: 1.25em;
+}
+
+h2.headLine {
+    text-align: center; 
+    text-transform: capitalize;
+    color: var(--accent1);
+    font-size: 1.09rem;
+}
+
+div.job{
+    margin-bottom: 2%;
+}
+
+/* =================== Switchable theme stuff ================================*/
+
+@media print {
+    .box {display:none;}
+}
+
+/* box container */
+  .box{
+    width: 300px;
+    border-radius: 10px;
+    padding:20px;
+    position: fixed;
+    right: 0px;
+    bottom:0px;
+    box-shadow: -2px -2px 2px var(--accent1);
+    border:0px 1px 1px 0px solid var(--accent2);  
+    background-color: var(--background-color);
+}
+
+
+/* This is the label */
+span#sliderLabel {
+    color:var(--accent2);
+    /* float:left; */
+    width: 50%;
+    
+    display: inline;
+}
+
+
+  /* This is the slider */
+  input[type=checkbox]{
+      height: 0;
+      width: 0;
+      visibility: hidden;
+  }
+  label {
+      cursor: pointer;
+      text-indent: -9999px;
+      width: 52px;
+      height: 27px;
+      background: var(--unaccent);
+      float: right;
+      border-radius: 100px;
+      position: relative;
+  }
+  label:after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      background: var(--background-color);
+      border-radius: 90px;
+      transition: 0.3s;
+  }
+  input:checked + label {
+      background: var(--accent2);
+  }
+  input:checked + label:after {
+      left: calc(100% - 5px);
+      transform: translateX(-100%);
+  }
+  label:active:after {
+      width: 45px;
+  }
+
+  /* transition */
+  html.transition,
+  html.transition *,
+  html.transition *:before,
+  html.transition *:after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+  }

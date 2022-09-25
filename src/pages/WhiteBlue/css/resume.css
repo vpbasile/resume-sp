@@ -1,0 +1,355 @@
+/* +++++++ */
+/* Color variables */
+/* +++++++ */
+html {
+	--background-color: hsl(280, 15%, 100%);
+	--text-primary: hsl(253, 17%, 16%);
+    --accent1: hsl(240, 75%, 45%);
+    --accent2: hsl(240, 75%, 30%);
+	--unaccent: hsl(217, 25%, 50%);
+	--clash: hsl(37, 100%, 50%);
+    /* Text Sizes */
+    --small:12px;
+    --medium: 18px;
+    --large:24px;
+    --huge:48px;
+}
+
+html[data-theme="dark"] {
+	--background-color: hsl(253, 17%, 16%);
+	--text-primary: hsl(280, 15%, 80%);
+	--accent1: hsl(200, 100%, 50%);
+	--accent2: hsl(217, 100%, 76%);
+	--unaccent: hsl(217, 25%, 50%);
+	--clash: hsl(37, 100%, 50%);
+}
+
+/* +++++++ */
+/* Structural things */
+/* +++++++ */
+
+body {
+    /* +++++++ */
+    /* Body color scheme */
+    /* +++++++ */
+    background-color: var(--background-color);
+    color:var(--text-primary);
+
+    /* Setting base font properties */
+    font-size: var(--small);
+    font-family: 'Montserrat',Calibri, sans-serif;
+
+    /* +++++++ */
+    /* Stuff to make it printable */
+    /* +++++++ */
+    width: 8.5in;
+    padding:0.25in;
+    margin: auto;
+}
+
+
+
+/* Stuff that shouldn't print */
+@media print {
+
+    .no-print {
+        display: none;
+    }
+}  
+
+/* Straight up not there */
+.no-show {display:none;}
+
+@media screen and (max-width:8.5in) {
+    body {
+        width: auto;
+        padding: 2%;
+    }
+
+    .left-col {
+        width: 100%;
+    }
+
+    .right-col {
+        width: 100%;
+    }
+
+    h1 {
+        font-size:inherit;
+    }
+}
+
+/* +++++++ */
+/* Utility */
+/* +++++++ */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+span.title {font-style: italic;}
+
+.bolded {
+  font-weight: bold;
+  color:var(--duo-ocean-dark);
+}
+
+.callout {
+  /* display: inline-block; */
+  padding:0px 10px 0px 10px;
+  text-indent: 0px;
+  border:2px solid var(--text-primary);
+}
+a.callout { text-decoration: none;}
+.callout.full-sentence { margin-right: 5px; }
+/* .pad { padding:1%; }
+.pad3 {padding:15px;} */
+.page-breaker {page-break-before:always;}
+.page-breaker{margin-top: 0.5in;}
+.inline { display: inline-block; }
+.red-border { border:2px solid red !important; }
+.justified {text-align: justify ;}
+.nocolor { color: var(--text-primary);}
+
+.full-width {
+    width:100%;
+    clear:both;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float:left;
+}
+
+span.draft::before {content: "[ ";}
+span.draft {
+    color:var(--unaccent);
+    font-weight: bold;
+    background-color:  rgb(255, 157, 0,0.5);
+}
+span.draft::after {content: " ]";}
+
+/* +++++++ */
+/* Specific Sections */
+/* +++++++ */
+
+#header {width: 100%;}
+#header > div.left-col {max-width: 70%; float: left;}
+#header > div.right-col {max-width: 40%; float: right;}
+
+.nt {color:var(--unaccent);}
+
+.contact-info {
+    text-align: right;
+}
+
+.contact-info h2,a {
+    border-bottom:none;
+    color: var(--unaccent);
+}
+    
+    /* .contact-info a { color:white; } */
+    
+div#links{
+    position:absolute;
+    top:20px;
+    right:0px;
+}
+
+/*Text and Headers */
+
+div#drawing {display: none;}
+
+/* a {color:white;}   */
+/* hr {color: var(--unaccent);} */
+
+h1,h2,h3,h4,h5,.competency {
+    
+    font-family: 'Montserrat',Calibri, sans-serif;
+
+}
+
+h1 {
+    font-size: var(--huge);
+    margin: 2% 0% 2% 0%;
+    letter-spacing: initial;
+}
+
+h2 {
+    font-size: var(--medium);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: var(--accent1);
+}
+
+
+
+h3 {
+    font-size: var(--medium);
+    color:var(--duo-ocean-dark);
+}
+
+h4 {
+    color:var(--accent2);
+    margin: 0%;
+    font-size: var(--medium); 
+    margin-bottom: 8px;
+    
+}
+
+h5 {margin-bottom: 3%;}
+
+td {
+    vertical-align: bottom;
+    text-align: center;
+}
+
+p {
+    text-indent: 2em;
+    margin-top: 5px;
+}
+
+
+/* +++++++ */
+/* Color */
+/* +++++++ */
+/* 
+.blue {
+    background-color: var(--duo-blue-light);
+    border-color: var(--duo-blue-dark);
+    color: white !important;
+}
+} */
+
+/* +++++++ */
+/* Overrides for specific things */
+/* +++++++ */
+
+/* Top Section */
+/* +++++++ */
+
+#summary {
+text-align: center;
+}
+
+/* h2.headline */
+
+.headLine {
+    text-align: center; 
+    text-transform: capitalize;
+    font-size: var(--medium);
+    margin-left: var(--small);
+    margin-right: var(--small);
+    margin-top: revert;
+    display: inline-block;
+    
+}
+
+div#competencies {
+    padding-bottom: var(--medium);        
+    text-align: center;
+}
+
+.competency {
+    margin: var(--large);
+    color:var(--unaccent);
+    font-size: var(--medium);
+}
+
+
+    /* Experience Section */
+/* +++++++ */
+
+div#experience > div > ul {
+    list-style-type: square;
+    border-left: 2px solid var(--accent2);
+    margin-top: 0%;
+    margin-bottom: 10px;
+}
+
+ul ul {
+    color: var(--text-primary);
+    list-style-type: square;
+    border-left: initial;
+}
+
+    
+li {
+    list-style-type: square;
+}
+    
+div.job{
+margin: 2% 0%;
+}
+
+.where {
+    margin-bottom: 0%;
+    margin-top: 1%;
+    color: var(--accent2);
+    border-bottom: 2px solid var(--accent2);
+}
+
+
+.when {
+    color: var(--text-primary);
+    text-align: right;
+    font-size: var(--small);
+    margin-top: 0px;
+}
+
+
+/* Education Section */
+/* +++++++ */
+#education-left {
+    float: left;
+    width: 18%;
+    }
+    
+    #education-center {
+    width:60%;
+    }
+    
+    #education-right {
+    float:right;
+    width:18%;
+    }
+
+div.edu-item {
+    margin: 2px;
+    padding: 1% 2%;
+    display: inline-block;
+    width: 90%;
+}
+
+h3.degree {
+    margin: 0px;
+}
+
+.school {
+    margin: 0px;
+    padding:0px;
+    color: var(--unaccent);
+}
+
+    /* Skills Section */
+/* +++++++ */
+
+#skill-label {margin-top: 20px;}
+
+/* #skills {
+    text-align: justify;
+} */
+    
+.skill {
+    display: inline-block;
+    margin: 3px;
+    font-weight: normal;
+    border: 1px solid var(--unaccent);
+    border-radius: 9px;
+    padding: 9px;
+  }

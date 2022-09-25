@@ -1,0 +1,477 @@
+/*Defining color variables*/
+
+/* light theme colors */
+html{
+    --background-color: white;
+    --unaccent: rgba(0,0,0,0.2);
+    --text-primary:#4b4b4b;   /* Ratio to background-color: ___:1  */
+    --clash:hsl(37, 100%, 50%);
+    --gray: rgb(229,229,229);
+}
+
+
+/* +++++++ */
+/* Structural things */
+/* +++++++ */
+
+body {
+    /* Stuff to make it printable */
+    width: 7.5in;
+    padding:0.25in;
+    margin: auto;
+
+}
+
+/* Stuff that shouldn't print */
+@media print {
+
+    .no-print {
+        display: none;
+    }
+}  
+
+/* Straight up not there */
+.no-show {display:none;}
+
+@media screen and (max-width:8.5in) {
+    body {
+        width: auto;
+        padding: 2%;
+    }
+
+    .left-col {
+        width: 100%;
+    }
+
+    .right-col {
+        width: 100%;
+    }
+
+    h1 {
+        font-size:inherit;
+    }
+}
+
+@font-face {font-family: "din-round"; src: url(""); }
+       
+body{
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    /* Setting base font properties */
+    font-size: 9pt;
+   font-family: din-round, monospace;
+   
+}
+
+.full-width {
+    width:100%;
+    clear:both;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float:left;
+}
+
+.icon { 
+    border-radius: 5px;
+    display: none;
+    visibility: hidden;
+}
+
+.large {
+    width: 0.25in; 
+    padding:3px;
+}
+
+.small {
+    width: 25px; 
+    padding:5px;
+}
+
+.tiny {
+    width:10px;
+    padding: 0px 10px 0px 10px;
+}
+
+/* +++++++ */
+/* Utility */
+/* +++++++ */
+
+.red-border { border:2px solid red !important; }
+
+/* +++++++ */
+/* Specific Sections */
+
+#header {
+    width: 100%;
+}
+
+
+   /* ======================================================== */
+
+/* Divs */
+
+.round {
+    border-radius: 8px;
+    border-bottom:5px solid white;
+    display: inline-block;
+}
+
+.green {
+    background-color: var(--duo-green-light);
+    border-color: var(--duo-green-dark);
+    color: white !important;
+}
+
+.ocean {
+    background-color: var(--duo-ocean-light);
+    border-color: var(--duo-ocean-dark);
+    color:white !important;
+}
+
+.blue {
+    background-color: var(--duo-blue-light);
+    border-color: var(--duo-blue-dark);
+    color: white !important;
+}
+
+.gold {
+    /* background-color: var(--duo-gold-light); */
+    background-image: linear-gradient(to bottom right,hsl(47, 75%, 50%), hsl(51, 99%, 60%),  hsl(47, 75%, 50%));   
+    border-color: var(--duo-gold-dark);
+    color: var(--duo-gold-text) !important;
+}
+
+.red {
+    background-color: rgb(255,76,75);
+    border-color: rgb(201,57,58);
+    color: white !important;
+}
+
+.purple {
+    background-color: var(--duo-purple-light);
+    border-color: var(--duo-purple-dark);
+    color:white !important;
+}
+
+/* 
+
+    --duo-gold-light: rgb(254,217,4);
+    --duo-gold-dark: rgb(255,200,1);
+    --duo-gold-accent: rgb(255,217,0);
+*/
+
+#header > div.left-col {max-width: 50%; float: left;}
+
+#header > div.right-col {max-width: 40%; float: right;}
+
+.nocolor {
+    color: var(--text-primary);
+}
+
+.justified {text-align: justify ;}
+
+h5.when {
+    margin-top: 2%;
+    text-align: left;
+    padding-left: 7%;
+}
+
+    /* Lists */
+
+div#experience > div > ul {
+    list-style-type: square;
+    border-left: 2px solid var(--accent2);
+    color: var(--text-primary);
+    margin-top: 0%;
+    margin-bottom: 10px;
+}
+
+ul ul {
+    color: var(--text-primary);
+    list-style-type: disc;
+    border-left: initial;
+}
+
+/*Text and Headers */
+
+a {color:white;}  
+div#drawing {display: none;}
+hr {color: var(--unaccent);}
+
+h1 {
+    color:var(--background-color);
+    font-size: 2rem;
+    margin: 2% 0% 2% 0%;
+    letter-spacing: initial;
+}
+
+h2 {
+    color:var(--accent1);
+    font-size: 1.5rem;
+    font-size: 1.09rem;
+    line-height: 1;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color:var(--duo-ocean-dark);
+}
+
+.what {
+    margin-bottom: 0%;
+    margin-top: 1%;
+    padding-left: 7%;
+}
+
+h4.what { font-size: 0.8em;}
+h5.when { font-size: 0.8em;}
+
+.where {
+    margin-bottom: 0%;
+    margin-top: 1%;
+    color: var(--duo-ocean-light);
+    color: var(--duo-blue-dark);
+    border-bottom: 2px solid var(--accent2);
+}
+
+h3.degree {
+    margin: 0px;
+}
+
+.school {
+    margin: 0px;
+    padding:0px;
+    text-align: right;
+    color:var(--duo-purple-dark);
+}
+
+#label-edu {
+    margin-top: 0px;
+}
+
+.when {
+    color:var(--text-primary);
+    text-align: right;
+    font-size: 1em;
+    margin-top: 0px;
+    display:inline-block;
+}
+
+h4 {
+    color:var(--duo-ocean-light);
+    margin: 0%;
+}
+
+h5 {margin-bottom: 3%;}
+
+/*Elements and Element-specific Classes*/
+
+td {
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+p {
+    text-indent: 2em;
+    margin-top: 5px;
+}
+
+p.narrow-line { line-height: 18px; }
+p.wide-line { line-height: 22px; }
+
+#salutation {
+    margin-bottom: 9px;
+}
+
+li {
+    list-style-type: disc;
+}
+
+#signature {
+width:100%; 
+text-align: right;
+/* margin: 10%; */
+font-size-adjust: 1.25em;
+}
+
+#signature h3 {
+    font-size: 1.2em;
+    margin: 0px;
+  }
+
+#initials {
+    height: 50px;
+    margin-right: 40px;
+}
+
+/* Override classes */
+
+    #main-letter {
+        padding:0px 0.25in 0px 0.25in;
+    }
+
+  span.title {font-style: italic;}
+
+  span.draft::before {content: "[ ";}
+
+  span.draft {
+      color:var(--unaccent);
+      font-weight: bold;
+      background-color:  rgb(255, 157, 0,0.5);
+  }
+  
+span.draft::after {content: " ]";}
+
+.bolded {
+    font-weight: bold;
+    color:var(--duo-ocean-dark);
+}
+
+.paren {
+    display: inline-block;
+    padding:0px 10px 0px 10px;
+    border-radius: 5px;
+    border:2px solid var(--gray);
+    border-bottom-width: 4px;
+    text-indent: 0px;
+}
+
+a.paren { text-decoration: none;}
+
+  
+.paren.full-sentence {
+    margin-right: 5px;
+  }
+
+
+.pad {
+    padding:1%;
+}
+
+#skills {
+    text-align: justify;
+}
+
+.skill {
+	padding: 1%;
+	margin: 4px;
+}
+
+.pad3 {
+    padding:15px;
+}
+
+.competency {
+	padding: 4px 24px 6px 12px;
+	font-size: 20px;
+	margin: 10px;
+}
+
+#summary {
+    text-align: center;
+}
+
+#page-breaker {page-break-before:always;}
+
+h2.headLine {
+    text-align: center; 
+    text-transform: capitalize;
+    color: var(--accent1);
+    font-size: 1.09rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: revert;
+}
+
+div.job{
+    margin: 2% 0%;
+}
+
+div.edu-item {
+    margin: 8px 0px 5px;
+    border-radius: 5px;
+	border: 2px solid var(--gray);
+	border-bottom-width: 4px;    
+    padding: 1% 5%;
+    font-size-adjust: 0.4;
+    display: inline-block;
+    width: 90%;
+}
+
+.nt {
+    color:var(--duo-blue-light);
+}
+
+.contact-info {
+    text-align: right;
+}
+
+.contact-info h2 {
+    border-bottom:none;
+    color:white;
+    font-size: 1.25em;
+}
+
+.contact-info a {
+    
+    color:white;
+}
+
+div#links{
+    position:absolute;
+    top:20px;
+    right:0px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+element {
+	float: right;
+	width: 60%;
+}
+
+/*  How to better ogranize CSS */
+
+#books {
+    width: 75px;;
+    float: left;
+    padding-right: 30px;
+    margin: 20px;
+}
+
+#education-left {
+    float: left;
+    width: 18%;
+}
+
+#education-center {
+    width:60%;
+}
+
+#education-right {
+    float:right;
+    width:18%;
+}
+
+#experience-label {
+    padding:10px;
+}
+
+#skill-label {
+    margin-top: 20px;
+}

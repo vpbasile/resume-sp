@@ -1,0 +1,23 @@
+
+#salutation {
+    margin-bottom: 9px;
+}
+
+#main-letter {padding:0px 0.25in 0px 0.25in;}
+
+#signature {
+    width:100%; 
+    text-align: right;
+    /* margin: 10%; */
+    font-size-adjust: 1.25em;
+}
+
+#signature h3 {
+    font-size: 1.2em;
+    margin: 0px;
+    }
+
+#initials {
+    height: 50px;
+    margin-right: 40px;
+}
