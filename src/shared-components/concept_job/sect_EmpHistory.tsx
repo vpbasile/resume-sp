@@ -1,13 +1,14 @@
-import { employmentData } from "../pages/ComponentizedResume/concept_job/ts_defs"
-import { employmentList } from "../pages/ComponentizedResume/resumeData"
+import { employmentList } from "../../pages/ComponentizedResume/resumeData"
 
-type myProps = { employmentData: employmentData[] }
-export default function EmploymentHistory(props: myProps): JSX.Element { return (<div>
+let job_key = 0;
+let position_key = 0;
+
+export default function EmploymentHistory(): JSX.Element { return (<div>
 		{employmentList.map(eachEmployment => {
-			return (<div className="employment">
+			return (<div className="employment" key={++job_key}>
 				{eachEmployment.positions.map(eachPosition => {
 					return (
-						<div className="position" >
+						<div className="position" key={++position_key}>
 							<h3 className="list-collapse">{eachEmployment.employer} | </h3>
 							<h4>{eachPosition.positionTitle} ({eachPosition.timePeriod})</h4>
 							{/* <h5> {eachPosition.timePeriod} </h5> */}

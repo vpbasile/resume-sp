@@ -9,7 +9,7 @@ import Componentized from './pages/ComponentizedResume';
 const App = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/" exact component={HomePage} />
+      <Route path="/" exact component={Componentized} />
       <Route path="/comp" exact component={Componentized} />
       <Route path="/plain" exact component={Plain} />
       <Route path="/blue" exact component={Blue} />

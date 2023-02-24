@@ -1,5 +1,5 @@
 // Imports
-import {employmentData} from "./concept_job/ts_defs";
+import {employmentData} from "../../shared-components/concept_job/ts_defs";
 
 export const personData = { name: "Vincent Basile", email: "vpbphone@gmail.com", phone: "724.984.4390", headline: `Proven Leadership, Complex Problem-solving, Client-Focused Relationship Building` };
 export const summary = `Analytical, innovative, and motivated Technical Consultant with 7 years experience supporting Epic organizations and twice that time spent as a creative collaborator in fast-paced and challenging environments. Diverse analytical and problem-solving skills, including experience in software development, data analysis, user experience support, and report design. Extensive experience optimizing workflow efficiencies and reducing costs. Strong client-focused relationship-building skills and a passion for knowledge sharing via well-written documentation.`;

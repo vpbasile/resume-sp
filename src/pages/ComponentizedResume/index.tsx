@@ -1,10 +1,10 @@
 // import "./bootstrap-grid.css";
 import "../../shared-css/bootstrap.min.css"
-import EmploymentHistory from "../../shared-components/sect_EmpHistory";
+import EmploymentHistory from "../../shared-components/concept_job/sect_EmpHistory";
 import HeaderRow from "../../shared-components/HeaderRow";
 import Section from "../../shared-components/Section";
 import "./resume.css"
-import { degree, educationHistoryContent, personData, employmentList, listOrgs, listExpertise, listCerts } from "./resumeData";
+import { degree, educationHistoryContent, personData, listOrgs, listExpertise, listCerts } from "./resumeData";
 // import "./resumeData.ts";
 // import './interfaceDefs';
 
@@ -34,7 +34,7 @@ export default function Componentized() {
 					<Section id="listCerts" title="Certifications">{parseList(listCerts)}</Section>
 				</div>
 				<div id='resume-main' className='col-9'>
-					<EmploymentHistory employmentData={employmentList} />
+					<EmploymentHistory/>
 				</div>
 			</div>
 			<div id="footerRow" className="row">
