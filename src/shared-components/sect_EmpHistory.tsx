@@ -1,4 +1,5 @@
-import { employmentData, employmentList } from "../pages/ComponentizedResume/resumeData"
+import { employmentData } from "../pages/ComponentizedResume/concept_job/ts_defs"
+import { employmentList } from "../pages/ComponentizedResume/resumeData"
 
 type myProps = { employmentData: employmentData[] }
 export default function EmploymentHistory(props: myProps): JSX.Element { return (<div>

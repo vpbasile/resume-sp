@@ -1,6 +1,6 @@
 // import "./bootstrap-grid.css";
 import "../../shared-css/bootstrap.min.css"
-import EmploymentHistory from "../../shared-components/EmploymentHistory";
+import EmploymentHistory from "../../shared-components/sect_EmpHistory";
 import HeaderRow from "../../shared-components/HeaderRow";
 import Section from "../../shared-components/Section";
 import "./resume.css"
