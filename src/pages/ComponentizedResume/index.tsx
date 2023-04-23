@@ -34,11 +34,21 @@ export default function Componentized() {
 					<Section id="listCerts" title="Certifications">{parseList(listCerts)}</Section>
 				</div>
 				<div id='resume-main' className='col-9'>
-					<EmploymentHistory/>
+					<EmploymentHistory />
 				</div>
 			</div>
 			<div id="footerRow" className="row">
-				{educationHistory(educationHistoryContent)}
+				<table>
+					<tbody>
+						<tr>
+							<td><h3>Education History</h3></td>
+							<td>
+								{educationHistory(educationHistoryContent)}
+
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div >
 	)
