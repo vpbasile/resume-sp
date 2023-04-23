@@ -55,8 +55,8 @@ export const employmentList: employmentData[] = [
 		id: "005", employer: "Evergreen Healthcare Partners", positions: [{
 			positionTitle: "Grand Central and Eligibility Consultant", timePeriod: "since September 2022", 
 			accomplishments: [
-				`Worked with the operational staff of six departments to transition build from EVS/Transport modules to Hospital Logictics`,
-				`Guided clinical management through identifying and implementing Epic's Discharge Milestones and Delays tool`,
+				`Built and led the transition to Hospital Logictics from EVS and Transport at two hopsitals along with dispatch for three non-patient service departments.`,
+				`Guided clinical operations through implementation of Epic's Discharge Milestones and Delays tool.`,
 				`Worked with financial clearance office to streamline worflows and fix RTE issues.`
 			]
 		}]
