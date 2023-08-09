@@ -52,12 +52,13 @@ export const listCerts: list = ["Prelude", "Eligibility", "Grand Central", "MyCh
 
 export const employmentList: employmentData[] = [
 	{
-		id: "005", employer: "Evergreen Healthcare Partners", positions: [{
-			positionTitle: "Grand Central and Eligibility Consultant", timePeriod: "since September 2022", 
+		id: "005", employer: "Stanford Healthcare", positions: [{
+			positionTitle: "Grand Central and Eligibility Consultant", timePeriod: "September 2022 - June 2023", 
 			accomplishments: [
-				`Built and led the transition to Hospital Logictics from EVS and Transport at two hopsitals along with dispatch for three non-patient service departments.`,
+				`Led the analysis, build, and user validation of Stanford's transition to the Hospital Logictics module from EVS and Transport at two hospitals along with dispatch for three non-patient service departments.`,
+				`Troubleshooting, issue resolution, and end-user support over the phone and on-site.`,
 				`Guided clinical operations through implementation of Epic's Discharge Milestones and Delays tool.`,
-				`Worked with financial clearance office to streamline worflows and fix RTE issues.`
+				`Worked with financial clearance office to streamline workflows and fix RTE issues.`
 			]
 		}]
 	},
@@ -74,11 +75,9 @@ export const employmentList: employmentData[] = [
 	},
 	{
 		id: "003", employer: "Epic Systems", positions: [
-			{
-				positionTitle: "Technical Solutions Engineer", timePeriod: "6.5 years", accomplishments: [`Built and sustained strong, long-term relationships, meeting with operational leadership, recommending best practices, and taking responsibility for customer success.`, `Utilized technical knowledge to troubleshoot and resolve technical issues in Epic applications for insurance eligibility verification, patient account assignment, and bed logistics.`, `Developed and taught classes for a little-understood functionality, including comprehensive documentation suited to engineers, clients, and executives.`, `Identified key issues leading to revenue loss and user dissatisfaction at Bryan Health. Guided client analysts through implementing preventative measures.`, `Met and exceeded Providence Health's needs through coding on-demand tools to translate
-				data imports from third-party systems.`]
-			},
-			{ positionTitle: "Technical Coordinator", timePeriod: "3 years", accomplishments: [`Managed team of applications strategy and technical solutions staff to drive business continuity and system responsiveness. Facilitated strong inter-organizational communication, delegated workload, and gave regular personnel evaluations.`, `Built and sustained strong relationships with clinical, technical, and executive leadership to drive strong communication and critical decision making.`, `Successfully coordinated software upgrades and monthly install of custom code packages including on-site and remote support, troubleshooting of issues and concerns, and guidance on team bandwidth to build and maintain functionality.`, `Drove reporting to senior leadership on staff performance and customer service to streamline operations and keep communications fluid and relevant.`, `Worked directly with clinical leadership to evaluate enhancements based on needs and priorities`] },
+			{ positionTitle: "Technical Coordinator", timePeriod: "3 years", accomplishments: [`Managed a cross-functional team of technical solutions staff to drive customer success maintain system health, delegating workload and giving regular personnel evaluations.`, `Built and sustained strong relationships with clinical, technical, and executive stakeholders to drive workflow design and process improvement.`, `Successfully coordinated three years of software upgrades and monthly installs of custom code packages including on-site and remote support, troubleshooting of issues and concerns, and guidance on team bandwidth to build and maintain functionality.`, `Drove reporting to senior leadership on staff performance and customer service to streamline operations and keep communications fluid and relevant.`, `Worked directly with clinical leadership to evaluate enhancements based on needs and priorities`] },
+			{ positionTitle: "Technical Solutions Engineer", timePeriod: "6.5 years", accomplishments: [`Utilized technical knowledge to troubleshoot and resolve technical issues in Grand Central, Prelude, Real-Time Eligibility, and reporting and analytics for those applications.`,`Built and sustained strong, long-term relationships with Epic clients through ongoing support, recommending best practices, meeting with operational leadership, and taking responsibility for customer success.`, `Supported numerous go-lives as a Bed Planning specialist`, `Advised Community Connect rollouts.`, `Trained classes for a little-understood functionality and developed comprehensive documentation suited to engineers, clients, and executives.`, `Identified key issues leading to revenue loss and user dissatisfaction at Bryan Health. Guided client analysts through implementing preventative measures.`, `Met and exceeded Providence Health's needs through coding on-demand tools to translate data imports from third-party systems.`]
+		},
 		]
 	},
 ];
